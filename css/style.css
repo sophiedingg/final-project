@@ -165,7 +165,6 @@ nav li{
     width: 30%;
     text-align: center;
     padding: 5px 5px 5px 5px;
-    align-self: center;
     display: block;
     margin-top: 10px;
     margin-bottom: 50px;
@@ -193,6 +192,7 @@ nav li{
 
 .hours-location {
     background-color: #F9DD00;
+    border-bottom: 3px solid black;
 }
 
 .hours-location p {
@@ -211,7 +211,42 @@ nav li{
     margin-bottom: 50px;
 }
 
+.contact {
+    background-color: #F9DD00;
+}
 
+.contact p {
+    width: 80%;
+    text-align: left;
+    padding: 5px 5px 5px 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    margin-bottom: 10px;
+    color: #C4C4C4;
+}
+
+.contact p:nth-child(2), .contact p:nth-child(7) {
+    background-color: #F9DD00;
+    color: black;
+}
+
+.contact p:nth-child(6) {
+    padding-bottom: 100px;
+    margin-bottom: 20px;
+}
+
+.contact p:nth-child(7) {
+    width: 25%;
+    text-align: center;
+    padding: 10px 5px 10px 5px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+}
 
 /* Mobile View: Club Above */
 
