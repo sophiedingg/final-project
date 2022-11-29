@@ -1,5 +1,9 @@
-h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+body {
+    font-family: Jacques 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.skip {
+    padding: 10px;
 }
 
 .skip a{
@@ -11,9 +15,14 @@ h1 {
     z-index: 1;
 }
 
-.nav_links {
+header {
     display: flex;
     flex-direction: column;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -23,6 +32,570 @@ nav li{
     padding-right:20px;
 }
 
-@media screen and (min-width: 500px) {
-    /* fix this */
+/* Styling the header */
+
+/* Styling the part of the header with the phone number and address */
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: space-between;
+    background-color: black;
+    border-right: 12px solid black;
+}
+
+.header-top p {
+    color: white;
+    font-family: Jacques;
+    font-size: 12px;
+    align-items: center;
+    align-self: center;
+}
+
+.header-top img {
+    max-width: 100%;
+    height: 20px;
+    border: 10px solid black;
+}
+
+.header-top img:first-child {
+    max-width: 100%;
+    height: 23px;
+    border: 10px solid black;
+}
+
+/* Styling the part of the header with the restaurant name */
+.restaurant-name {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 50px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 8px solid black;
+}
+
+.restaurant-name img {
+    height: 100%;
+}
+
+.restaurant-name h1 {
+    font-size: 40px;
+}
+
+/* Styling the part of the header with the navigation links */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    padding: 8px;
+}
+
+/* Mobile View: Home Page */
+
+.container-main {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.container-main div:first-child {
+    grid-column: 1 / 2;
+}
+
+.container-main div:first-child img {
+    width: 100%;
+}
+
+.container-main h3 {
+    text-align: center;
+    font-size: 20px;
+    padding: 40px 20px 20px 20px;
+}
+
+.container-main p {
+    text-align: center;
+}
+
+.serving-text-block {
+    padding: 0px 0px 20px 0px;
+    border-bottom: 3px solid black;
+}
+
+.menu-text-block p {
+    font-style: italic
+}
+
+.menu-text-block ul {
+    display: grid;
+    list-style: none;
+    grid-template-columns: auto auto;
+    padding: 10px 0px 0px 0px;
+    margin-bottom: 20px;
+}
+
+.serving-text-block p, .menu-text-block p, .menu-text-block li {
+    padding: 0px 50px 20px 50px;
+}
+
+.dine, .dance, .drink {
+    padding: 0px 20px 0px 20px;
+}
+
+.dine {
+    border: 3px solid red;
+}
+
+.dance {
+    border: 3px solid #F9DD00;
+}
+
+.drink {
+    border: 3px solid #39992D;
+}
+
+.dine img, .dance img, .drink img {
+    text-align: center;
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dine h4, .dance h4, .drink h4 {
+    width: 30%;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    align-self: center;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.dine h4 {
+    border: 3px solid red;
+}
+
+.dance h4 {
+    border: 3px solid #F9DD00;
+}
+
+.drink h4 {
+    border: 3px solid #39992D;
+}
+
+.dine p, .dance p, .drink p {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.hours-location {
+    background-color: #F9DD00;
+}
+
+.hours-location p {
+    padding: 10px 0px 10px 0px;
+}
+
+.hours-location p:nth-child(3) {
+    margin-bottom: 20px;
+}
+
+.hours-location img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+
+
+/* Mobile View: Club Above */
+
+/* Background Image */
+
+.title-photo-club {
+    /* background-attachment: fixed; /* Parallax effect */      
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 300px;                /* Parallax effect */
+}
+
+.title-photo-club h2 {
+    font-size: 40px;
+    line-height: 5;
+    padding: 50px 0;
+    color: white;
+    font-family: Jacques 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.container-club-above div:first-child {
+    background-image: url("../images/club-above.jpg");
+    background-repeat: no-repeat;
+}
+
+/* Styling the first description */
+
+.club-above-description {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 25px 25px 25px;
+}
+
+.club-above-description h3 {
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+}
+
+/* Styling the first gallery of images */
+
+.club-above-gallery-1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    background-color: #F9DD00;
+    justify-content: center;
+    align-items: center;
+    border-top: 15px solid #F9DD00;
+    border-bottom: 15px solid #F9DD00;
+}
+
+.club-above-gallery-1 img {
+    width: 90%; 
+    border: 5px solid #39992D;
+}
+
+/* Styling the second description */
+
+.booking {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 25px 25px 25px;
+}
+
+.booking h3 {
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+}
+
+/* Styling the second gallery of images */
+
+.club-above-gallery-2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    background-color: #F9DD00;
+    justify-content: center;
+    align-items: center;
+    border-top: 15px solid #F9DD00;
+    border-bottom: 15px solid #F9DD00;
+}
+
+.club-above-gallery-2 img {
+    width: 90%; 
+    border: 5px solid #39992D;
+}
+
+
+/* Mobile View: Rathskeller */
+
+/* Background Image */
+
+
+
+.title-photo-rathskeller {
+    /* background-attachment: fixed; /* Parallax effect */      
+    background-position: center;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    height: 300px;                /* Parallax effect */
+}
+
+.title-photo-rathskeller h2 {
+    font-size: 40px;
+    line-height: 5;
+    padding: 50px 0;
+    color: white;
+    font-family: Jacques 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.container-rathskeller div:first-child {
+    background-image: url("../images/rathskeller.jpg");
+    background-repeat: no-repeat;
+}
+
+.container-rathskeller {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.rathskeller-text-block {
+    padding: 20px;
+}
+
+.rathskeller-text-block h3 {
+    padding: 0px 0px 10px 0px;
+}
+
+.outliving-text-block {
+    padding: 20px;
+}
+
+.outliving-text-block h3 {
+    padding: 0px 0px 10px 0px;
+}
+
+.dining {
+    padding: 20px;
+}
+
+.dining h3 {
+    text-align: center;
+}
+
+.gallery-rathskeller {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: #39992D;
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-rathskeller img {
+    width: 80%;
+    border: 10px solid #F9DD00;
+    justify-self: center;
+}
+
+
+@media screen and (min-width: 675px) {
+    /* Styling the part of the header with the phone number and address */
+    .header-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: space-between;
+        background-color: black;
+        border-right: 12px solid black;
+    }
+
+    .header-top p {
+        color: white;
+        font-family: Jacques;
+        font-size: 16px;
+        align-items: center;
+        align-self: center;
+    }
+
+    .header-top img {
+        max-width: 100%;
+        height: 20px;
+        border: 10px solid black;
+    }
+
+    .header-top img:first-child {
+        max-width: 100%;
+        height: 23px;
+        border: 10px solid black;
+    }
+
+    /* Styling the part of the header with the restaurant name */
+    .restaurant-name {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 100px;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 8px solid black;
+    }
+
+    .restaurant-name img {
+        height: 100%;
+    }
+
+    .restaurant-name h1 {
+        font-size: 60px;
+    }
+
+    /* Styling the part of the header with the navigation links */
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 8px;
+    }
+
+    /* Tablet View: Club Above */
+
+    /* Styling the first description */
+
+    .club-above-description {
+        padding: 20px 100px 30px 100px;
+    }
+
+    /* Styling the second description */
+
+    .booking {
+        padding: 20px 100px 30px 100px;
+    }
+
+    /* Styling the first gallery of images */
+
+    .club-above-gallery-1 {
+        flex-wrap: wrap;
+        flex-direction: row;
+        column-gap: 25px;
+        row-gap: 50px;
+        border-top: 50px solid #F9DD00;
+        border-bottom: 50px solid #F9DD00;
+    }
+
+    .club-above-gallery-1 img {
+        width: 40%; 
+    }
+
+    .club-above-gallery-1 img:nth-child(5) {
+        border: 20px solid red;
+    }
+
+    /* Styling the second gallery of images */
+    
+    .club-above-gallery-2 {
+        flex-wrap: wrap;
+        flex-direction: row;
+        row-gap: 50px;
+        justify-content: space-evenly;
+        border-top: 50px solid #F9DD00;
+        border-bottom: 50px solid #F9DD00;
+    }
+
+    .club-above-gallery-2 img {
+        width: 40%; 
+    }
+
+    /* Tablet View: Rathskeller */
+
+    .rathskeller-text-block {
+        padding: 20px 100px 20px 100px;
+    }
+    
+    .outliving-text-block {
+        padding: 20px 100px 20px 100px;
+    }
+
+    .rathskeller-text-block h3 {
+        text-align: center;
+    }
+
+    .outliving-text-block h3 {
+        text-align: center;
+    }
+
+    /* Styling the gallery of images */
+
+    .gallery-rathskeller {
+        grid-template-columns: auto auto;
+    }
+
+    .gallery-rathskeller img {
+        width: 90%;
+        border: 10px solid red;
+    }
+
+    .gallery-rathskeller img:nth-child(3), .gallery-rathskeller img:nth-child(4), .gallery-rathskeller img:nth-child(8) {
+        grid-column: 1 / 3;
+        border: 30px solid #F9DD00;
+    }
+
+    .gallery-rathskeller img:nth-child(7), .gallery-rathskeller img:nth-child(9) {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    /* Larger Screen: Club Above */
+
+    /* Styling the first description */
+
+    .club-above-description {
+        padding: 40px 250px 50px 250px;
+        justify-content: center;
+    }
+
+    /* Styling the second description */
+
+    .booking {
+        padding: 40px 250px 50px 250px;
+        justify-content: center;
+    }
+
+    /* Styling the first gallery of images */
+    .club-above-gallery-1 {
+        flex-wrap: wrap;
+        flex-direction: row;
+        row-gap: 50px;
+        justify-content: space-evenly;
+        border-top: 30px solid #F9DD00;
+        border-bottom: 30px solid #F9DD00;
+    }
+
+    .club-above-gallery-1 img {
+        width: 20%; 
+    }
+
+    .club-above-gallery-1 img:nth-child(5) {
+        width: 90%; 
+    }
+    
+    /* Styling the second gallery of images */
+    .club-above-gallery-2 {
+        flex-wrap: wrap;
+        flex-direction: row;
+        row-gap: 50px;
+        justify-content: space-evenly;
+        border-top: 30px solid #F9DD00;
+        border-bottom: 30px solid #F9DD00;
+    }
+
+    .club-above-gallery-2 img {
+        width: 20%; 
+    }
+
+    /* Large Screen: Rathskeller */
+
+    /* Styling the gallery of images */
+
+    .gallery-rathskeller {
+        grid-template-columns: auto auto auto;
+    }
+
+    .gallery-rathskeller img {
+        width: 80%;
+        border: 10px solid #F9DD00;
+    }
+
+    .gallery-rathskeller img:first-child, .gallery-rathskeller img:nth-child(5), .gallery-rathskeller img:nth-child(9) {
+        border: 5px solid red;
+        grid-column: 1 / 4;
+        width: 100%;
+        display: inherit;
+    }
+
+    .gallery-rathskeller img:nth-child(3), .gallery-rathskeller img:nth-child(4), .gallery-rathskeller img:nth-child(8) {
+        grid-column: auto;
+        border: 10px solid #F9DD00;
+    }
+
+    .gallery-rathskeller img:nth-child(7) {
+        display: inherit;
+    }
+
 }
