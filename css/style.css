@@ -91,6 +91,17 @@ nav li{
     padding: 8px;
 }
 
+/* Styling the footer */
+footer {
+    background-color: black;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    padding: 20px 0px 20px 0px;
+}
+
 /* Mobile View: Home Page */
 
 .container-main {
@@ -142,15 +153,15 @@ nav li{
 }
 
 .dine {
-    border: 3px solid red;
+    border: 10px solid red;
 }
 
 .dance {
-    border: 3px solid #F9DD00;
+    border: 10px solid #F9DD00;
 }
 
 .drink {
-    border: 3px solid #39992D;
+    border: 10px solid #39992D;
 }
 
 .dine img, .dance img, .drink img {
@@ -164,7 +175,7 @@ nav li{
 .dine h4, .dance h4, .drink h4 {
     width: 30%;
     text-align: center;
-    padding: 5px 5px 5px 5px;
+    padding: 20px 5px 20px 5px;
     display: block;
     margin-top: 10px;
     margin-bottom: 50px;
@@ -468,6 +479,46 @@ nav li{
         padding: 8px;
     }
 
+    /* Tablet View: Home Page */
+
+    .container-main {
+        grid-template-columns: 50% 50%;
+    }
+
+    .container-main div:first-child {
+        grid-column: 1 / span all;
+    }
+
+    .serving-text-block {
+        border-right: 2px solid black;
+        border-bottom: none;
+    }
+
+    .menu-text-block ul {
+        padding: 0px 0px 0px 0px;
+    }
+
+    .menu-text-block li {
+        font-size: 11px;
+    }
+
+    .menu-text-block {
+        border-left: 2px solid black;
+    } 
+
+    .dine, .dance, .drink, .hours-location, .contact {
+        grid-column: 1 / 3;
+    }
+
+    .dine p, .dance p, .drink p {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .dine h4, .dance h4, .drink h4 {
+        padding: 5px 5px 5px 5px;
+    }
+
     /* Tablet View: Club Above */
 
     /* Styling the first description */
@@ -556,6 +607,51 @@ nav li{
 }
 
 @media screen and (min-width: 900px) {
+    /* Larger Screen: Home Page */
+
+    .container-main {
+        grid-template-columns: repeat(6, 16.667%);
+    }
+
+    .serving-text-block, .hours-location {
+        grid-column: 1 / span 3;
+        border-bottom: 3px solid black;
+    }
+
+    .menu-text-block, .contact {
+        grid-column: 4 / span 3;
+        border-bottom: 3px solid black;
+    }
+
+    .menu-text-block li {
+        font-size: 15px;
+    }
+
+    .serving-text-block p {
+        margin: 5px 20px 5px 20px;
+    }
+
+    .dine {
+        grid-column: 1 / span 2;
+    }
+
+    .dance {
+        grid-column: 3 / span 2;
+    }
+
+    .drink {
+        grid-column: 5 / span 2;
+    }
+
+    .dine p, .dance p, .drink p {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .contact, .hours-location {
+        border-top: 3px solid black;
+    }
+    
     /* Larger Screen: Club Above */
 
     /* Styling the first description */
