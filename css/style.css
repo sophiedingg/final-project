@@ -1,5 +1,6 @@
 body {
     font-family: Jacques 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
 }
 
 .skip {
@@ -30,13 +31,32 @@ header {
 nav li{
     display:inline;
     padding-right:20px;
+    margin: 10px;
 }
 
-.nav_item a:hover, .nav_items a:focus {
+.nav_item a:hover, .nav_item a:focus {
     border: 3px solid black;
-    border-radius: 2px;
+    border-radius: 6px;
+    padding: 1px;
 }
 
+.nav_item_active a {
+    border: 3px solid black;
+    border-radius: 6px;
+    padding: 1px;
+}
+
+#hover-home, #hover-club-above, #hover-rathskeller {
+    visibility: hidden;
+    position: absolute;
+    border:1px solid #000;
+    width:400px;
+    height:400px;
+}
+
+#hover-rathskeller {
+    right: 40px;
+}
 /* Styling the header */
 
 /* Styling the part of the header with the phone number and address */
@@ -85,6 +105,32 @@ nav li{
 
 .restaurant-name h1 {
     font-size: 40px;
+    /* Adding animation */
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em;
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange; }
+}
+
+.button {
+    position: relative;
+    animation: mymove 5s infinite;
 }
 
 /* Styling the part of the header with the navigation links */
@@ -106,6 +152,17 @@ footer p {
     color: white;
     padding: 20px 0px 20px 0px;
 }
+
+/* Animation */
+@keyframes rathskeller-animation {
+    0%   {background-color: #F9DD00;}
+    25%  {background-color: #39992D;}
+    50%  {background-color: #F9DD00;}
+    100% {background-color: #39992D;}
+}
+
+
+
 
 /* Mobile View: Home Page */
 
@@ -240,7 +297,7 @@ footer p {
     margin-right: auto;
     background-color: white;
     margin-bottom: 10px;
-    color: #C4C4C4;
+    color: black;
 }
 
 .contact p:nth-child(2), .contact p:nth-child(7) {
@@ -264,26 +321,98 @@ footer p {
     border: 3px solid black;
 }
 
+/* Form */
+  
+  legend{ 
+    font-size: 20px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  label{
+    display: inline-block;
+    margin-right:10px;
+    width:15%;
+  }
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  span {
+    margin-left:20%;
+    font-family: italic;
+    font-weight: bold;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 35vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  
+  input[type=checkbox]{
+      display:inline;
+      width:inherit;
+  }
+  
+  input[type=submit] {
+    background-color: #38803C;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  input[type=submit]:hover {
+    opacity: 0.8;
+  }
+  
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (min-width: 770px) {
+    form{
+      width: 80%;
+      margin: 0 auto;
+    }
+  
+    input{
+      width:80%;
+    }
+  
+    textarea{
+      width:80%;
+      height: 25vh;
+   }
+   
+   div + label{
+      line-height: 25vh;
+      vertical-align:top;
+   }
+  }
+
 /* Mobile View: Club Above */
 
 /* Background Image */
 
-.title-photo-club {
-    /* background-attachment: fixed; /* Parallax effect */      
-    background-position: center;  /* Parallax effect */
-    background-repeat: no-repeat; /* Parallax effect */
-    background-size: cover;       /* Parallax effect */
+.title-photo-club { 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
-    height: 300px;                /* Parallax effect */
-}
-
-.title-photo-club h2 {
-    font-size: 40px;
-    line-height: 5;
-    padding: 50px 0;
-    color: white;
-    font-family: Jacques 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
+    height: 300px; 
 }
 
 .container-club-above div:first-child {
@@ -299,7 +428,7 @@ footer p {
     padding: 15px 25px 25px 25px;
 }
 
-.club-above-description h3 {
+.club-above-description h2 {
     padding: 10px 0px 10px 0px;
     font-size: 20px;
 }
@@ -315,6 +444,18 @@ footer p {
     align-items: center;
     border-top: 15px solid #F9DD00;
     border-bottom: 15px solid #F9DD00;
+
+    /* Adding animation */
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+/* Adding animation */
+.club-above-gallery-1.active {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .club-above-gallery-1 img {
@@ -330,7 +471,7 @@ footer p {
     padding: 15px 25px 25px 25px;
 }
 
-.booking h3 {
+.booking h2 {
     padding: 10px 0px 10px 0px;
     font-size: 20px;
 }
@@ -346,6 +487,18 @@ footer p {
     align-items: center;
     border-top: 15px solid #F9DD00;
     border-bottom: 15px solid #F9DD00;
+    /* Adding animation */
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+    
+}
+
+/* Adding animation */
+.club-above-gallery-2.active {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .club-above-gallery-2 img {
@@ -369,15 +522,6 @@ footer p {
     height: 300px;                /* Parallax effect */
 }
 
-.title-photo-rathskeller h2 {
-    font-size: 40px;
-    line-height: 5;
-    padding: 50px 0;
-    color: white;
-    font-family: Jacques 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-}
-
 .container-rathskeller div:first-child {
     background-image: url("../images/rathskeller.jpg");
     background-repeat: no-repeat;
@@ -392,7 +536,7 @@ footer p {
     padding: 20px;
 }
 
-.rathskeller-text-block h3 {
+.rathskeller-text-block h2 {
     padding: 0px 0px 10px 0px;
 }
 
@@ -400,7 +544,7 @@ footer p {
     padding: 20px;
 }
 
-.outliving-text-block h3 {
+.outliving-text-block h2 {
     padding: 0px 0px 10px 0px;
 }
 
@@ -408,7 +552,7 @@ footer p {
     padding: 20px;
 }
 
-.dining h3 {
+.dining h2 {
     text-align: center;
 }
 
@@ -418,6 +562,8 @@ footer p {
     background-color: #39992D;
     gap: 20px;
     padding: 20px;
+    animation-name: rathskeller-animation;
+    animation-duration: 10s;
 }
 
 .gallery-rathskeller img {
@@ -582,11 +728,11 @@ footer p {
         padding: 20px 100px 20px 100px;
     }
 
-    .rathskeller-text-block h3 {
+    .rathskeller-text-block h2 {
         text-align: center;
     }
 
-    .outliving-text-block h3 {
+    .outliving-text-block h2 {
         text-align: center;
     }
 
