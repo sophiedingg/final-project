@@ -27,9 +27,9 @@
         <div class="navigation">
             <nav>
                 <ul class="nav_links">
-                <li class="nav_item"><a href="../final-project/index.html">Home</a></li>
-                <li class="nav_item"><a href="../final-project/club-above.html">Club Above</a></li>
-                <li class="nav_item"><a href="../final-project/rathskeller.html">Rathskeller</a></li>
+                <li class="nav_item_active"><a href="../final-project/index.html">Home</a></li>
+                <li class="nav_item" id="nav_club_above" ><a href="../final-project/club-above.html">Club Above<iframe id="hover-club-above" src="../final-project/club-above.html"></iframe></a></li>
+                <li class="nav_item" id="nav_rathskeller" ><a href="../final-project/rathskeller.html">Rathskeller<iframe id="hover-rathskeller" src="../final-project/rathskeller.html"></iframe></a></li>
                 </ul>
             </nav>
         </div>
@@ -63,7 +63,7 @@
 
         <div class="dine" tabindex="0">
             <h3>Dine</h3>
-            <img id="image-drink" src="images/logo-right.jpg" alt="club-above-dine" />
+            <img id="image-dine" src="images/logo-right.jpg" alt="club-above-dine" />
             <p>We've added some Neue Deutsche (New German) dishes to the traditional German fare we've served since 1961!</p>
             <h4>Learn more</h4>
         </div>
@@ -89,18 +89,39 @@
             <img id="map" src="images/map.jpg" alt="map" />
         </div>
 
-        <div class="contact" tabindex="0">
-            <h3>Contact</h3>
-            <p>Phone: (734) 663-7758</p>
+        <div class="contact" tabindex="0">            <!-- <p>Phone: (734) 663-7758</p>
             <p>Name</p>
             <p>Email</p>
             <p>Phone Number</p>
             <p>Message</p>
-            <p>Send Message</p>
+            <p>Send Message</p> -->
+            <form>
+                <fieldset>
+                  <legend>Contact</legend>
+              
+                  <label for="name_id">Your Name</label>
+                  <input type="text" placeholder="Your Name" id = "name_id" name="name" required>
+              
+                  <label for="email_id">Your Email</label>
+                  <input type="email" placeholder="Your Email" id = "email_id" name="email" required>
+              
+              
+                  <label for="msg">Leave A Message</label>
+                  <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
+              
+                  <input type="checkbox" checked="checked" name="remember" id = "cBox"> 
+                  <label for ="cBox">Remember me</label>
+              
+                  <input type="submit" value = "Contact Me">
+                </fieldset>
+               </form>
         </div>
+
+
     </main>
         <footer>
             <p>Produced by Michigan Advertising & Marketing 2022</p>
         </footer>
+        <script src = "js/home.js"></script>
 </body>
 </html>
